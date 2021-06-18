@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>All Crypto Solution</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="./css/setup.css">
+    <link rel="stylesheet" href="./css/include.css">
+    <link rel="stylesheet" href="./css/fullpage.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script src="./css/jquery.js"></script>
+    
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;700;900&family=Roboto:wght@500&display=swap');
+        /*font-family: 'Roboto', sans-serif;*/
+        /*font-family: 'Nanum Gothic', sans-serif;*/
+        /*font-family: 'Noto Sans KR', sans-serif;*/
+        
+        /*header*/
+        header{
+            position: fixed;
+            top: 0;
+            z-index: 99;
+            background-color: rgba(67,109,134,0.6);
+        }
+        .down {
+              background-color:rgba(0,0,0,.3);
+              -webkit-transition-duration:0.4s;
+              -webkit-transition-timing-function:ease;
+              transition-duration:0.4s;
+              transition-timing-function:ease;
+        }
+        header .wrap{
+            position: relative;
+        }
+        header .menu li a{
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        header .menu li:hover a{
+            color: #092842;
+        }
+        header .menu .button span{
+            background-color: white;
+        }
+        header .menu.view .button span:nth-child(1){
+            background-color: white;
+        }
+        header .menu.view .button span:nth-child(3){
+            background-color: white;
+        }
+        header .menu .menuBox{
+            background-color: #598299;
+        }
+        header .menu .menuBox ul{
+            background-image: url(./img/menuBox_1.png);
+        }
+
+        /*main*/
+        main{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        /*mainSlider*/
+        main .mainSlider{
+            position: relative;
+        }
+        main .video{
+            position: relative;
+        }
+        main .video::before{
+            content: "";
+            opacity: .2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000;
+        }
+        main .mainSlider .wrap{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        main .mainSlider .title{
+            color: white;
+            position: relative;
+        }
+        main .mainSlider .title .name{
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 80px;
+        }
+        main .mainSlider .title .sub{
+            line-height: 35px;
+            font-size: 20px;
+            margin-top: 80px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+        }
+        /*arrow animation*/
+        main .mainSlider .arrow{
+            position: absolute;
+            bottom: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        main .mainSlider .arrow a {
+          padding-top: 70px;
+        }
+        main .mainSlider .arrow a span {
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          width: 24px;
+          height: 24px;
+          margin-left: -12px;
+          border-left: 2px solid #ffff;
+          border-bottom: 2px solid #ffff;
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          -webkit-animation: sdb 1.5s infinite;
+          animation: sdb 1.5s infinite;
+          box-sizing: border-box;
+        }
+        @-webkit-keyframes sdb {
+          0% {
+            -webkit-transform: rotate(-45deg) translate(0, 0);
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+            opacity: 0;
+          }
+        }
+        @keyframes sdb {
+          0% {
+            transform: rotate(-45deg) translate(0, 0);
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            transform: rotate(-45deg) translate(-20px, 20px);
+            opacity: 0;
+          }
+        }
+        /*arrow animation*/
+        
+        /*con01*/
+        main .con01{
+            width: 100%;
+            height: 944px;
+            background-image: url(./img/con01Bg.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+        }
+        main .con01, main .con02{
+            padding: 200px 30px;
+        }
+        main .con01 h3{
+            color: white;
+            font-size: 20px;
+            text-align: left;
+            padding-bottom: 180px;
+            font-weight: 300;
+        }
+        main .con01 .title{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 150px;
+            opacity: 0.8;
+            transition: transform .5s;
+        }
+        main .con01 .title>div{
+            transition: transform .5s;
+        }
+        main .con01 .title>div:hover{
+            transform: scale(1.05);
+        }
+        main .con01 .title .name{
+            font-size: 20px;
+            color: white;
+            background: rgba(66,88,103,0.7);
+            padding: 100px 114px;
+            text-align: left;
+            font-weight: 300;
+        }
+        /*con02*/
+        main .con02{
+            width: 100%;
+            height: 1080px;
+            background-image: url(./img/con02Bg.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+            color: white;
+        }
+        main .con02 h3, main .con02 h4{
+            color: white;
+            font-size: 20px;
+            text-align: left;
+            padding-bottom: 80px;
+            font-weight: 300;
+        }
+        main .con02 h1{
+            color: white;
+            font-size: 60px;
+            text-align: left;
+            padding-bottom: 50px;
+        }
+        
+        .con02 button{
+            border: 1px solid white;
+            outline: 0;
+            color: white;
+            background-color: #0001;
+            background-image: url("./img/right.png");
+            background-repeat: no-repeat;
+            background-size: 28px;
+            background-position: right 37px center;
+            cursor: pointer;
+            padding: 20px 140px 20px 53px;
+            position: relative;
+            font-size: 22px;
+            margin: 0 auto 0 0;
+        }
+        .con02 button p{
+            font-size: 18px;
+            font-weight: lighter;
+            padding-bottom: 5px;
+        }
+        .con02 button:hover{
+            background-color: white;
+            border: 1px solid white;
+            color: black;
+            background-image: url("./img/right_1.png");
+            transition: all .5s;
+        }
+        .con02 .btn-secondary{
+            display: block;
+            margin-top: 20px;
+        }
+        
+        
+        /*con03*/        
+        main .con03{
+            width: 100%;
+            background-image: url(./img/con03Bg_1.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            color: #444646;
+            padding: 100px 30px 50px 30px;
+        }
+        main .con03 h1{
+            font-size: 57px;
+            color: #444646;
+        }
+        main .con03 .flex{
+            justify-content:flex-end;
+        }
+        main .con03 .title{
+            width: 45%;
+            text-align: left;
+            padding: 50px 0 60px 0;
+        }
+        main .con03 .title .sub{
+            color: #444646;
+            width: 100%;
+        }
+        main .con03 .title .sub h4{
+            font-size: 18px;
+            font-weight: 500;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+        main .con03 .title .sub .box{
+            width: 100%;
+            outline: 0;
+            line-height: 30px;
+            font-size: 16px;
+            padding-left: 5px;
+        }
+        main .con03 .title .sub .box_1{
+            width: 100%;
+            outline: 0;
+            font-size: 16px;
+            padding-left: 5px;
+        }
+        .con03 .button{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .con03 button{
+            font-size: 18px;
+            outline: 0;
+            color: white;
+            background-color: #444646;
+            padding: 8px 40px;
+            cursor: pointer;
+            font-weight: 500;
+            font-family: 'Nanum Gothic', sans-serif;
+            margin: auto;
+        }
+        
+        
+        @media only screen and (min-width:100px) and (max-width:1600px){
+            main .mainSlider .arrow{
+                bottom: 100px;
+            }
+            main .mainSlider{
+                overflow: hidden;
+            }
+            main .video video{
+                width: 110%;
+                transition: width .3s;
+            }
+            main .con03{
+                background-position-x: 37%;
+                transition: all .5s;
+            }
+            
+        }
+        @media only screen and (min-width:100px) and (max-width:1400px){
+            main .mainSlider .arrow{
+                bottom: 100px;
+            }
+            main .mainSlider{
+                overflow: hidden;
+            }
+            main .video video{
+                width: 150%;
+                transition: width .3s;
+            }
+            
+        }
+        @media only screen and (min-width:100px) and (max-width:1200px){
+            main .mainSlider .title .name{
+                font-size: 60px;
+                transition: font-size .5s;
+            }
+            main .mainSlider{
+                overflow: hidden;
+            }
+            main .video video{
+                width: 180%;
+                transition: width .5s;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:1100px){
+            main .con03{
+                background-position-x: 30%;
+                transition: all .5s;
+            }
+            main .con03 .title{
+                width: 100%;
+                transition: all .5s;
+            }
+            main .con03{
+                background-position-x: 16%;
+                transition: all .5s;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:1000px){
+            main .mainSlider .arrow{
+                bottom: 50px;
+            }
+            main .mainSlider .arrow a span{
+                width: 21px;
+                height: 21px;
+            }
+            main .mainSlider .title .name{
+                font-size: 50px;
+                transition: font-size .5s;
+            }
+            main .mainSlider .title .sub{
+                font-size: 17px;
+                margin-top: 41px;
+                transition: all .5s;
+            }
+            main .con01 .title{
+                grid-template-columns: 1fr;
+            }
+            main .con01 .title{
+                display: inline-grid;
+                grid-gap: 43px;
+            }
+            main .con01{
+                padding: 150px 0;
+            }
+            main .con01 h3{
+                padding-bottom: 89px;
+            }
+            main .con01 .title .name{
+                padding: 85px 84px;
+                transition: all .5s;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:800px){
+            header .wrap{
+                padding: 15px;
+                transition: padding .5s;
+            }
+            header .hLogo a img{
+                width: 180px;
+                transition: width .5s;
+            }
+            header .menu .menuBox .img{
+                height: 70px;
+                transition: all .5s;
+            }
+            main .mainSlider .title .sub{
+                font-size: 17px;
+                margin-top: 47px;
+                transition: all .5s;
+            }
+            main .con01 .title .name{
+                padding: 65px 64px;
+                transition: all .5s;
+            }
+            main .con03{
+                background-position-x: 20%;
+                transition: all .5s;
+            }
+            footer .flex{
+                flex-direction: column;
+            }
+            footer .title{
+                text-align: center;
+                padding-left: 0;
+                padding-top: 30px;
+            }
+            
+        }
+        @media only screen and (min-width:100px) and (max-width:700px){
+            
+        }
+        @media only screen and (min-width:100px) and (max-width:600px){
+            header .menu .menuBox .img img{
+                width: 180px;
+            }
+            main .mainSlider{
+                overflow: hidden;
+            }
+            
+            main .video video{
+                width: 200%;
+                transition: width .5s;
+            }
+            main .mainSlider .arrow a span{
+                width: 16px;
+                height: 16px;
+                transition: all .5s;
+            }
+            main .mainSlider .arrow a span{
+                bottom: 80px;
+                transition: all .5s;
+            }
+            main .mainSlider .title .name{
+                font-size: 40px;
+                transition: all .5s;
+            }
+            main .con01 .title .name{
+                font-size: 17px;
+                transition: all .5s;
+            }
+            main .con02 h1, main .con03 h1{
+                font-size: 50px;
+                transition: all .5s;
+            }
+            main .con03 .title .sub h4{
+                font-size: 17px;
+            }
+            main .con02 h4{
+                font-size: 17px;
+            }
+            main .con03{
+                background-position-x: 23%;
+                transition: all .5s;
+            }
+            .con02 button{
+                width: 100%;
+                transition: all .5s;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:500px){
+            header .menu .menuBox{
+                width: 100%;
+            }
+            main .mainSlider .title .name{
+                font-size: 42px;
+            }
+            main .mainSlider .title .sub{
+                font-size: 17px;
+                line-height: 26px;
+                margin-top: 31px;
+            }
+            main .mainSlider .arrow{
+                bottom: 30px;
+            }
+            main .con01 h3{
+                padding-bottom: 74px;
+            }
+            main .con01, main .con02, main .con03{
+                height: auto;
+                padding: 133px 20px;
+            }
+            main .con03{
+                padding: 90px 30px 40px 30px;
+                justify-content: center;
+                background-position-x: 24%;
+                transition: all .5s;
+            }
+            main .con01 .title .name{
+                text-align: center;
+                padding: 60px 41px;
+            }
+            main .con01 .title{
+                grid-gap: 22px;
+            }
+            main .con03 .title{
+                width: 100%;
+            }
+            main .con02 h1, main .con03 h1{
+                font-size: 45px;
+            }
+            .con02 button{
+                font-size: 19px;
+                padding: 20px 84px 20px 0;
+            }
+        }
+        @media only screen and (min-width:100px) and (max-width:400px){
+            header .menu .menuBox{
+                width: 100%;
+            }
+            main .mainSlider .title .name{
+                font-size: 32px;
+            }
+            main .mainSlider .title .sub{
+                font-size: 15px;
+                line-height: 26px;
+                margin-top: 31px;
+            }
+            main .mainSlider .arrow a span{
+                bottom: 49px;
+                transition: all .5s;
+            }
+            main .mainSlider .arrow{
+                bottom: 30px;
+            }
+            main .con01 h3{
+                padding-bottom: 74px;
+            }
+            main .con01 .title .name{
+                text-align: center;
+                text-align: 17px;
+                padding: 50px 30px;
+            }
+            main .con01 .title{
+                grid-gap: 22px;
+            }
+            main .con01 h3, main .con02 h3, main .con03 h3{
+                font-size: 18px;
+            }
+            main .con01, main .con02{
+                padding: 111px 20px;
+            }
+            main .con03{
+                padding: 100px 20px 50px 20px;
+            }
+            main .con02 h1, main .con03 h1{
+                font-size: 36px;
+            }
+            main .con03 .title{
+                padding: 60px 0;
+            }
+            main .con03 .title .sub h4{
+                font-size: 16px;
+            }
+            .con02 button{
+                font-size: 18px;
+                padding: 20px 84px 20px 0;
+            }
+            .con02 button p{
+                font-size: 16px;
+            }
+            
+        }
+        @media only screen and (min-width:100px) and (max-width:370px){
+            main .con01 .title .name{
+                font-size: 15px;
+            }
+            main .con03{
+                background-position-x: 26%;
+            }
+            
+        }
+        @media only screen and (min-width:100px) and (max-width:300px){
+            
+        }
+        
+    </style>
+    
+</head>
+<body>
+    
+    <header>
+        <div class="wrap">
+           <div class="flex">
+            <!--logo-->
+            <div class="hLogo">
+                <a href="#"><img src="./img/mainLogo.png" alt=""></a>
+            </div>
+            <!--logo-->
+            <!--menu-->
+            <nav class="menu">
+               <div class="pc">
+                   <ul>
+                       <li>
+                          <a href="#">Home</a>
+                       </li>
+                       <li>
+                          <a href="#">Business</a>
+                       </li>
+                       <li>
+                          <a href="#">About</a>
+                       </li>
+                       <li>
+                          <a href="#">Contact</a>
+                       </li>
+                       <li>
+                          <a href="#"><i class="fas icon fa-globe"></i></a>
+                       </li>
+                    </ul>
+               </div>
+               <div class="mobile">
+                    <div class="menuBox">
+                      <div class="img">
+                           <img src="./img/mainLogo.png" alt="">
+                       </div>
+                        <ul>
+                           <li>
+                              <a href="#">Home</a>
+                           </li>
+                           <li>
+                              <a href="#">Business</a>
+                           </li>
+                           <li>
+                              <a href="#">About</a>
+                           </li>
+                           <li>
+                              <a href="#">Contact</a>
+                           </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="button mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <!--menu-->
+        </div>
+    </header>
+    <main>
+       
+       <div class="section mainSlider">
+            <div class="video">
+                <video width="100%" height="auto" autoplay loop muted>
+                    <source src="./img/mainSlider_2.mp4" type="video/mp4">
+
+                </video>
+                <div class="wrap">
+
+                    <div class="title">
+                        <div class="name">All Crypto Solution</div>
+                        <div class="sub">
+                            전문적인 기술과 운영을 바탕으로<br>
+                            암호화폐에 관한 다양한 기술을 개발하는<br>
+                            블록체인 전문 기업입니다.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="arrow">
+                    <a href="#">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="section con01">
+            <div class="wrap">
+                <h3>| What we do</h3>
+                
+                <div class="title">
+                    <div class="name">
+                        고객의 Needs에<br>
+                        발맞춰 다양한 솔루션을<br>
+                        제공합니다.
+                    </div>
+                    <div class="name">
+                        플랫폼의 개발 및 유지 보수 등<br>
+                        One-stop Service 를<br>
+                        책임지고 있습니다.
+                    </div> 
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+        <div class="section con02">
+            <div class="wrap" style="text-align: left;">
+                <h3>| Our Business</h3>
+                
+                <h1>
+                    Valuable<br>
+                    Opportunities
+                </h1>
+                
+                <h4>가치 있는 투자기회를 통해 고객의 믿음에 만족스러운 성과로 보답하겠습니다.</h4>
+                
+                
+                <button type="button" class="btn btn-primary">
+                <p>Miner</p>
+                채굴기 상품 구매
+                </button>
+                <button type="button" class="btn btn-secondary">
+                <p>Coin</p>
+                플랫폼 상품 구매
+                </button>
+            </div>
+        </div>
+        
+        <div class="section con03">
+            <div class="wrap">
+                
+                <h1>Contact Us</h1>
+                <div class="flex">
+                    <div></div>
+                    <div class="title">
+                       <div class="sub">
+                            <h4>Name</h4>
+                            <input class="box" type="text">
+                        </div>
+                        <div class="sub">
+                            <h4>Personal / Company</h4>
+                            <input class="box" type="text">
+                        </div>
+                        <div class="sub">
+                            <h4>E - mail</h4>
+                            <input class="box" type="text">
+                        </div>
+                        <div class="sub">
+                            <h4>Comment :</h4>
+                            <textarea name="text" class="box_1" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="button">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap">
+           <div class="flex">
+                <div class="logo">
+                    <img src="./img/fLogo.png" alt="">
+                </div>
+                <div class="title">
+                   <ul>
+                       <li class="address">부산 해운대구 센텀중앙로 97 2911호 | </li>
+                       <li class="email">allcryptosolution@gmail.com</li>
+                   </ul>
+                    <p>개인정보처리방침</p>
+                    <span>Copyright 2021 &copy; All Crypto Solution. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    
+    
+    $(function(){
+       
+        $("header .menu .button").on("click",function(){
+            $("header .menu").toggleClass("view");   
+        });
+        
+          var $header = $('header'); //헤더를 변수에 넣기
+          var $page = $('.section'); //색상이 변할 부분
+          var $page = $('.con01'); //색상이 변할 부분
+          var $window = $(window);
+          var pageOffsetTop = $page.offset().top;//색상 변할 부분의 top값 구하기
+
+          $window.resize(function(){ //반응형을 대비하여 리사이즈시 top값을 다시 계산
+            pageOffsetTop = $page.offset().top;
+          });
+
+          $window.on('scroll', function(){ //스크롤시
+            var scrolled = $window.scrollTop() >= pageOffsetTop; //스크롤된 상태; true or false
+            $header.toggleClass('down', scrolled); //클래스 토글
+          });
+        
+    });
+    
+    
+    window.onload = function () {
+            var elm = ".section";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 800, complete: function () {
+                        }
+                    });
+                });
+            });
+        
+            $("#menu .button").on("click",function(){
+                $("#menu").toggleClass("view");   
+            });
+        
+        
+        
+        }
+    
+    
+    
+    
+    
+</script>
+</html>
